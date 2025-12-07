@@ -10,4 +10,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'autorobottech';
+
+  onSubmit(e: Event) {
+  e.preventDefault();
+  alert('Köszönjük! Hamarosan jelentkezünk.');
+}
 }
