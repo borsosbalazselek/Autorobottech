@@ -1,24 +1,28 @@
 <div class="body">
-  <header class="header" id="top-header">
+  <header class="header" id="top-header"  [class.scrolled]="scrolled">
     <div class="container header-inner">
       <div class="logo">{{ 'brandLogo' | translate }}</div>
 
-      <div class="hamburger" id="nav-toggle" [attr.aria-label]="'navAriaMenu' | translate">
+      <button
+  class="hamburger"
+  id="nav-toggle"
+  type="button"
+  (click)="toggleNav()"
+  [class.active]="navOpen"
+  [attr.aria-label]="'navAriaMenu' | translate"
+  [attr.aria-expanded]="navOpen"
+  aria-controls="main-nav"
+>
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
 
-      <div class="lang-switch">
-        <button (click)="switchLang('hu')">{{ 'langHu' | translate }}</button>
-        <button (click)="switchLang('en')">{{ 'langEn' | translate }}</button>
-      </div>
-
-      <nav class="nav" id="main-nav">
-        <a class="nav-link" href="#home">{{ 'navHome' | translate }}</a>
-        <a class="nav-link" href="#services">{{ 'navServices' | translate }}</a>
-        <a class="nav-link" href="#portfolio">{{ 'navPortfolio' | translate }}</a>
-        <a class="nav-link" href="#contact">{{ 'navContact' | translate }}</a>
+      <nav class="nav" id="main-nav" [class.open]="navOpen">
+        <a class="nav-link" href="#home" (click)="closeNav()">{{ 'navHome' | translate }}</a>
+        <a class="nav-link" href="#services" (click)="closeNav()">{{ 'navServices' | translate }}</a>
+        <a class="nav-link" href="#portfolio" (click)="closeNav()">{{ 'navPortfolio' | translate }}</a>
+        <a class="nav-link" href="#contact" (click)="closeNav()">{{ 'navContact' | translate }}</a>
         <a class="nav-cta" href="https://portfolio.autorobottech.hu/" rel="noopener">
           {{ 'navOpenPortfolio' | translate }} →
         </a>
@@ -32,7 +36,7 @@
       <div class="container hero-inner">
         <div class="hero-text">
           <div class="hero-kicker">{{ 'heroKicker' | translate }}</div>
-
+          
           <h1 class="hero-title">
             {{ 'heroTitle1' | translate }}
             <span>{{ 'heroTitle2' | translate }}</span>
@@ -245,4 +249,40 @@
       <div class="footer-links">{{ 'footerLinks' | translate }}</div>
     </div>
   </footer>
+  <!-- Floating language drawer -->
+<div class="lang-fab" [class.open]="langOpen" aria-label="Language switcher">
+  <button
+    type="button"
+    class="lang-fab__tab"
+    (click)="toggleLangFab($event)"
+    [attr.aria-expanded]="langOpen"
+    aria-controls="lang-fab-panel"
+    aria-haspopup="true"
+  >
+  <img
+  class="lang-fab__flagimg"
+  [src]="currentLang === 'hu' ? 'assets/flags/hu.png' : 'assets/flags/en.png'"
+  alt=""
+  aria-hidden="true"
+/>
+    <span class="lang-fab__chev" aria-hidden="true">▸</span>
+    <span class="sr-only">Language</span>
+  </button>
+
+  <div
+  id="lang-fab-panel"
+  class="lang-fab__panel"
+  [attr.aria-hidden]="!langOpen"
+>
+  <button type="button" class="lang-fab__opt" (click)="setLangAndClose('hu', $event)">
+    <img class="opt-flag" src="assets/flags/hu.png" alt="" aria-hidden="true" />
+    <span class="opt-text">HU</span>
+  </button>
+
+  <button type="button" class="lang-fab__opt" (click)="setLangAndClose('en', $event)">
+    <img class="opt-flag" src="assets/flags/en.png" alt="" aria-hidden="true" />
+    <span class="opt-text">EN</span>
+  </button>
+</div>
+</div>
 </div>

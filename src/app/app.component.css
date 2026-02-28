@@ -163,6 +163,9 @@
       height: 18px;
       justify-content: space-between;
       cursor: pointer;
+      background: transparent;
+      border: 0;
+      padding: 0;
     }
 
     .hamburger span {
@@ -332,7 +335,7 @@
     .hero-card {
       position: relative;
       width: 280px;
-      height: 360px;
+      height: 380px;
       border-radius: 22px;
       padding: 1.4rem;
       background: radial-gradient(circle at top left, rgba(255,255,255,0.95), rgba(0, 28, 95, 0.9));
@@ -384,7 +387,7 @@
 
     .section-head {
       margin-bottom: 1.5rem;
-      text-align: le ft;
+      text-align: left;
     }
 
     .section-eyebrow {
@@ -604,3 +607,179 @@
     .footer-links {
       opacity: 0.8;
     }
+
+    /* ========= Floating language switcher ========= */
+.lang-fab {
+  position: fixed;
+  right: 0.65rem;
+  top: 10%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.lang-fab__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  border: 1px solid rgba(255,255,255,0.45);
+  background: rgba(0, 12, 80, 0.55);
+  backdrop-filter: blur(10px);
+
+  color: #eaf6ff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+
+  border-radius: 999px;
+  padding: 0.55rem 0.65rem 0.55rem 0.75rem;
+
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.lang-fab__tab:hover {
+  transform: translateY(-1px);
+  background: rgba(0, 12, 80, 0.70);
+  border-color: rgba(255,255,255,0.65);
+}
+
+.lang-fab__tab:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(174,224,255,0.45), 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.lang-fab__flag {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.lang-fab__chev {
+  font-size: 0.95rem;
+  transform: rotate(0deg);
+  transition: transform 0.18s ease;
+  opacity: 0.9;
+}
+
+/* panel (alapból “rejtve”, de animálható) */
+.lang-fab__panel {
+  position: absolute;
+  right: calc(100% + 0.6rem);
+  top: 0;
+  min-width: 150px;
+
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+
+  padding: 0.45rem;
+  display: grid;
+  gap: 0.35rem;
+
+  opacity: 0;
+  transform: translateX(10px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.lang-fab.open .lang-fab__panel {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
+}
+
+.lang-fab.open .lang-fab__chev {
+  transform: rotate(180deg);
+}
+
+.lang-fab__opt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+
+  border: 0;
+  background: transparent;
+  border-radius: 12px;
+  padding: 0.55rem 0.6rem;
+
+  cursor: pointer;
+  font-weight: 700;
+  color: #003a72;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.lang-fab__opt:hover {
+  background: rgba(0, 119, 204, 0.10);
+  transform: translateY(-1px);
+}
+
+.lang-fab__opt:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,119,204,0.25);
+}
+
+.opt-flag { font-size: 1.05rem; line-height: 1; }
+.opt-text { letter-spacing: 0.06em; }
+
+/* SR-only helper */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* mobilon kényelmesebb alul */
+@media (max-width: 650px) {
+  .lang-fab {
+    top: auto;
+    bottom: 1rem;
+    transform: none;
+  }
+
+  .lang-fab__panel {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+/* motion-szegény mód */
+@media (prefers-reduced-motion: reduce) {
+  .lang-fab__tab,
+  .lang-fab__panel,
+  .lang-fab__chev,
+  .lang-fab__opt {
+    transition: none !important;
+  }
+}
+/* Panel: ne legyen túl széles */
+.lang-fab__panel {
+  min-width: 100px;      /* a 150 helyett */
+  width: max-content;
+}
+
+/* Panel opciók: zászló kép */
+.opt-flag {
+  width: 22px;
+  height: 14px;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Tabon lévő zászló kép */
+.lang-fab__flagimg {
+  width: 22px;
+  height: 14px;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}

@@ -21,6 +21,44 @@ export class AppComponent {
   private meta = inject(Meta);
   private doc = inject(DOCUMENT);
 
+  // + állapot
+langOpen = false;
+
+// + aktuális nyelv (ngx-translate)
+get currentLang(): string {
+  return this.translate.currentLang || this.translate.defaultLang || 'hu';
+}
+
+// + kis emoji zászló a fülre
+flagFor(lang: string): string {
+  return lang === 'hu' ? '🇭🇺' : '🇬🇧';
+}
+
+toggleLangFab(e?: Event) {
+  e?.stopPropagation();
+  this.langOpen = !this.langOpen;
+}
+
+setLangAndClose(lang: 'hu' | 'en', e?: Event) {
+  e?.stopPropagation();
+  this.switchLang(lang);     // a meglévő függvényedet használjuk
+  this.langOpen = false;
+}
+
+// kattintás “kívül” => zár
+@HostListener('document:click', ['$event'])
+onDocClick(ev: MouseEvent) {
+  if (!this.langOpen) return;
+  const t = ev.target as HTMLElement | null;
+  if (!t?.closest('.lang-fab')) this.langOpen = false;
+}
+
+// ESC => zár
+@HostListener('document:keydown', ['$event'])
+onDocKey(ev: KeyboardEvent) {
+  if (ev.key === 'Escape') this.langOpen = false;
+}
+
   constructor() {
     this.translate.addLangs(['hu', 'en']);
     this.translate.setDefaultLang('hu');
