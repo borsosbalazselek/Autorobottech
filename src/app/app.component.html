@@ -7,12 +7,16 @@
         <span></span>
         <span></span>
       </div>
+      <div class="lang-switch">
+        <button (click)="switchLang('hu')">HU</button>
+        <button (click)="switchLang('en')">EN</button>
+      </div>
       <nav class="nav" id="main-nav">
-        <a class="nav-link" href="#home">Kezdőlap</a>
-        <a class="nav-link" href="#services">Szolgáltatások</a>
-        <a class="nav-link" href="#portfolio">Portfólió</a>
-        <a class="nav-link" href="#contact">Kapcsolat</a>
-        <a class="nav-cta" href="https://portfolio.autorobottech.hu/" rel="noopener">Portfólió megnyitása →</a>
+        <a class="nav-link" href="#home">{{ 'nav.home' | translate }}</a>
+        <a class="nav-link" href="#services">{{ 'nav.services' | translate }}</a>
+        <a class="nav-link" href="#portfolio">{{ 'nav.portfolio' | translate }}</a>
+        <a class="nav-link" href="#contact">{{ 'nav.contact' | translate }}</a>
+        <a class="nav-cta" href="https://portfolio.autorobottech.hu/" rel="noopener">{{ 'nav.onpenportfolio' | translate }} →</a>
       </nav>
     </div>
   </header>

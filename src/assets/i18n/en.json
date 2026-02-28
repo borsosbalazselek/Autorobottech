@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "title": "AutoRobotTech – Webes, IoT és AI alapú automatizálás",
+    "description": "AutoRobotTech: webes automatizálás, IoT rendszerek, mesterséges intelligencia, fejlesztés, vezérlés és integráció."
+  },
+
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "solutions": "Solutions",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "portfolio": "Portfolio",
+    "onpenportfolio": "Open Portfolio"
+  },
+
+  "hero": {
+    "title": "Webes, IoT és AI alapú automatizálás",
+    "subtitle": "Egyedi rendszerek, vezérlés, integrációk és okos automatizmusok.",
+    "cta": "Tudj meg többet"
+  },
+
+  "services": {
+    "title": "Szolgáltatásaink",
+    "description": "Automatizált rendszereket, webes integrációkat és egyedi IoT megoldásokat fejlesztünk.",
+
+    "item1": {
+      "title": "Webes rendszerek",
+      "text": "Egyedi fejlesztésű backend és frontend megoldások."
+    },
+
+    "item2": {
+      "title": "IoT alapú vezérlés",
+      "text": "Okos eszközök integrálása és felügyelete."
+    },
+
+    "item3": {
+      "title": "Mesterséges intelligencia",
+      "text": "AI alapú automatizmusok és rendszerek fejlesztése."
+    }
+  },
+
+  "solutions": {
+    "title": "Megoldásaink",
+    "description": "Komplex rendszereket építünk az igényedhez igazítva.",
+
+    "ai": {
+      "title": "AI automatizálás",
+      "text": "Viselkedésfák, workflow-k, predikciók és vezérlő algoritmusok."
+    },
+    "iot": {
+      "title": "IoT Integráció",
+      "text": "Szenzorok, aktuátorok, gateway-ek és egyedi protokollok."
+    },
+    "web": {
+      "title": "Web Integráció",
+      "text": "Backend API-k, admin felületek és automatizált folyamatok."
+    }
+  },
+
+  "gallery": {
+    "title": "Galéria",
+    "description": "Projektjeinkből készült válogatás.",
+
+    "img1": { "alt": "IoT vezérlés példa" },
+    "img2": { "alt": "AI workflow vizualizáció" },
+    "img3": { "alt": "Webes dashboard" },
+    "img4": { "alt": "Automatizált folyamat ábra" }
+  },
+
+  "contact": {
+    "title": "Kapcsolat",
+    "description": "Írj nekünk, ha érdekel egy rendszer vagy automatizálás.",
+
+    "form": {
+      "name": "Név",
+      "namePlaceholder": "Add meg a neved",
+      "email": "E-mail",
+      "emailPlaceholder": "Add meg az e-mail címed",
+      "message": "Üzenet",
+      "messagePlaceholder": "Írd meg az üzeneted…",
+      "submit": "Üzenet elküldése"
+    }
+  },
+
+  "footer": {
+    "copyright": "© 2025 AutoRobotTech – Minden jog fenntartva."
+  }
+}
