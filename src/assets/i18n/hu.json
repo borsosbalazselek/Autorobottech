@@ -1,89 +1,110 @@
 {
-  "meta": {
-    "title": "AutoRobotTech – Webes, IoT és AI alapú automatizálás",
-    "description": "AutoRobotTech: webes automatizálás, IoT rendszerek, mesterséges intelligencia, fejlesztés, vezérlés és integráció."
-  },
+  "seoTitle": "AutoRobotTech – Webes, IoT és AI automatizálás",
+  "seoDescription": "Webes, IoT és AI automatizálás: stabil rendszerek, integrációk és vezérlés – eredményre és teljesítményre tervezve.",
+  
+  "brandLogo": "AUTOROBOTTECH.HU",
+  "navAriaMenu": "Menü",
+  "langHu": "HU",
+  "langEn": "EN",
 
-  "nav": {
-    "home": "Kezdőlap",
-    "services": "Szolgáltatások",
-    "solutions": "Megoldások",
-    "gallery": "Galéria",
-    "contact": "Kapcsolat",
-    "portfolio": "Portfolio",
-    "onpenportfolio": "Portfolio megynitása"
-  },
+  "navHome": "Kezdőlap",
+  "navServices": "Szolgáltatások",
+  "navPortfolio": "Portfólió",
+  "navContact": "Kapcsolat",
+  "navOpenPortfolio": "Portfólió megnyitása",
 
-  "hero": {
-    "title": "Webes, IoT és AI alapú automatizálás",
-    "subtitle": "Egyedi rendszerek, vezérlés, integrációk és okos automatizmusok.",
-    "cta": "Tudj meg többet"
-  },
+  "heroKicker": "⚙️ Webes, IoT és AI automatizálás — eredményre tervezve",
+  "heroTitle1": "Automatizálás, ami",
+  "heroTitle2": "valóban dolgozik helyetted",
+  "heroTitle3": "— a böngészőben és a rendszereid mélyén is.",
+  "heroSub": "Magas konverziójú webes folyamatoktól IoT vezérlési rétegeken át AI-alapú döntési logikákig — olyan automatizálási rendszereket tervezek és építek, amelyek csökkentik a manuális munkát, megszüntetik a súrlódást és skálázhatóvá teszik a működésed.",
+  "heroCtaServices": "Szolgáltatások megtekintése",
+  "heroCtaPortfolio": "Valós projektek megtekintése",
+  "heroTag1": "Webes & no-code automatizáció",
+  "heroTag2": "IoT vezérlés & felügyelet",
+  "heroTag3": "Strukturált döntési logika",
+  "heroTag4": "Gyakorlati AI integráció",
 
-  "services": {
-    "title": "Szolgáltatásaink",
-    "description": "Automatizált rendszereket, webes integrációkat és egyedi IoT megoldásokat fejlesztünk.",
+  "heroBadge": "Teljes körű automatizálás",
+  "heroCardTitle": "Automatizálás mérhető eredményekre",
+  "heroCardText": "Webes rendszerek, IoT eszközök és AI modellek egyetlen céllal: átláthatóság, stabilitás és mérhető teljesítmény.",
+  "heroStat1Title": "Web & AI",
+  "heroStat1Text": "Konverzió-orientált landingek, CRM automatizáció, AI asszisztensek és intelligens workflow-k.",
+  "heroStat2Title": "IoT & vezérlés",
+  "heroStat2Text": "Biztonságos felügyelet, valós idejű adatok és távoli irányítás — letisztult webes felületen.",
 
-    "item1": {
-      "title": "Webes rendszerek",
-      "text": "Egyedi fejlesztésű backend és frontend megoldások."
-    },
+  "servicesEyebrow": "Mit építek?",
+  "servicesTitle": "Automatizálási rendszerek, amelyek előreviszik a vállalkozásod",
+  "servicesLead1": "Legyen szó konverzióra optimalizált webes folyamatról vagy skálázható IoT vezérlési rétegről, minden projekt ugyanazzal a mérnöki szemlélettel készül. A részletek elérhetők a",
+  "servicesLeadStrong": "services.autorobottech.hu",
+  "servicesLead2": "oldalon.",
 
-    "item2": {
-      "title": "IoT alapú vezérlés",
-      "text": "Okos eszközök integrálása és felügyelete."
-    },
+  "servicesCard1Badge": "Web & üzleti automatizáció",
+  "servicesCard1Title": "Nagy teljesítményű webes automatizáció",
+  "servicesCard1Text": "AI és no-code eszközökkel támogatott rendszerek, amelyek leadet gyűjtenek, folyamatokat automatizálnak és zökkenőmentesen kapcsolódnak a CRM-edhez.",
+  "servicesCard1Li1": "Automatizált leadgyűjtés és kvalifikálás",
+  "servicesCard1Li2": "CRM integráció (HubSpot, Pipedrive, egyedi API-k)",
+  "servicesCard1Li3": "AI chatbotok és intelligens tudásbázis rendszerek",
 
-    "item3": {
-      "title": "Mesterséges intelligencia",
-      "text": "AI alapú automatizmusok és rendszerek fejlesztése."
-    }
-  },
+  "servicesCard2Badge": "IoT vezérlés & felügyelet",
+  "servicesCard2Title": "Intelligens monitorozási és vezérlési rendszerek",
+  "servicesCard2Text": "Eszközök, szenzorok és vezérlők összekapcsolása biztonságos, skálázható webes dashboardokba. Átláthatóságra és valódi használhatóságra tervezve.",
+  "servicesCard2Li1": "Eszközintegráció (MQTT, REST API, Modbus/TCP)",
+  "servicesCard2Li2": "Élő dashboardok, trendkövetés és intelligens riasztások",
+  "servicesCard2Li3": "Jogosultságkezelés, naplózás és intuitív vezérlőpanelek",
 
-  "solutions": {
-    "title": "Megoldásaink",
-    "description": "Komplex rendszereket építünk az igényedhez igazítva.",
+  "servicesCard3Badge": "Döntési rendszerek",
+  "servicesCard3Title": "Strukturált viselkedésvezérelt architektúrák",
+  "servicesCard3Text": "Átlátható és skálázható döntési logika játékokhoz, robotikai vagy komplex automatizálási rendszerekhez — teljesítményre és fenntarthatóságra optimalizálva.",
+  "servicesCard3Li1": "Architektúra tervezés és dokumentáció",
+  "servicesCard3Li2": "Integráció meglévő motorokba / rendszerekbe",
+  "servicesCard3Li3": "Optimalizálás és tesztelési folyamatok",
 
-    "ai": {
-      "title": "AI automatizálás",
-      "text": "Viselkedésfák, workflow-k, predikciók és vezérlő algoritmusok."
-    },
-    "iot": {
-      "title": "IoT Integráció",
-      "text": "Szenzorok, aktuátorok, gateway-ek és egyedi protokollok."
-    },
-    "web": {
-      "title": "Web Integráció",
-      "text": "Backend API-k, admin felületek és automatizált folyamatok."
-    }
-  },
+  "servicesCard4Badge": "Alkalmazott AI",
+  "servicesCard4Title": "AI valódi üzleti teljesítményre hangolva",
+  "servicesCard4Text": "Saját adaton tanított modellek, amelyek közvetlenül beépülnek a működési folyamatokba — mérhető hatékonyságnövekedéssel.",
+  "servicesCard4Li1": "Adatelőkészítés és struktúra tervezés",
+  "servicesCard4Li2": "Modellek tanítása és finomhangolása",
+  "servicesCard4Li3": "Bevezetés meglévő rendszerekbe",
 
-  "gallery": {
-    "title": "Galéria",
-    "description": "Projektjeinkből készült válogatás.",
+  "servicesButton": "Teljes szolgáltatási áttekintés",
 
-    "img1": { "alt": "IoT vezérlés példa" },
-    "img2": { "alt": "AI workflow vizualizáció" },
-    "img3": { "alt": "Webes dashboard" },
-    "img4": { "alt": "Automatizált folyamat ábra" }
-  },
+  "portfolioEyebrow": "Portfólió",
+  "portfolioTitle": "Bizonyíték, nem ígéret",
+  "portfolioLead": "Valós megvalósítások webes automatizáció, IoT rendszerek és AI workflow-k területén — átlátható technikai háttérrel.",
 
-  "contact": {
-    "title": "Kapcsolat",
-    "description": "Írj nekünk, ha érdekel egy rendszer vagy automatizálás.",
+  "portfolioBoxTitle": "portfolio.autorobottech.hu",
+  "portfolioBoxText": "Strukturált bemutató valódi mérnöki döntésekről, architekturális gondolkodásról és mérhető eredményekről — nem csupán látványról.",
+  "portfolioBoxMeta": "Nézd meg, hogyan épül össze a web, az IoT vezérlés és az AI egy egységes, skálázható rendszerbe.",
+  "portfolioBoxButton": "Portfólió megtekintése",
+  "portfolioTag1": "Reszponzív & többnyelvű alap",
+  "portfolioTag2": "Dark / light élmény",
 
-    "form": {
-      "name": "Név",
-      "namePlaceholder": "Add meg a neved",
-      "email": "E-mail",
-      "emailPlaceholder": "Add meg az e-mail címed",
-      "message": "Üzenet",
-      "messagePlaceholder": "Írd meg az üzeneted…",
-      "submit": "Üzenet elküldése"
-    }
-  },
+  "portfolioSide1Title": "Mit találsz benne?",
+  "portfolioSide1Li1": "Webes / front-end / automatizációs rendszerek",
+  "portfolioSide1Li2": "IoT / vezérlés / monitorozási architektúrák",
+  "portfolioSide1Li3": "AI eszközök és viselkedésvezérelt projektek",
 
-  "footer": {
-    "copyright": "© 2025 AutoRobotTech – Minden jog fenntartva."
-  }
+  "portfolioSide2Title": "Hogyan érdemes nézni?",
+  "portfolioSide2Text": "Minden projekt bemutatja a problémát, a mögötte lévő architekturális gondolkodást és az elért, mérhető eredményt.",
+
+  "contactEyebrow": "Kapcsolat",
+  "contactTitle": "Építsünk olyat, ami valóban teljesít",
+  "contactLead": "Írd meg, mit szeretnél automatizálni — webes folyamat, IoT vezérlés vagy AI integráció — és egy gyakorlatias, eredményorientált javaslatot kapsz vissza.",
+
+  "contactInfoTitle": "Elérhetőségek",
+  "contactEmailLabel": "E-mail",
+  "contactPortfolioLabel": "Portfólió",
+  "contactHighlight": "Van már koncepciód vagy dokumentációd? Küldd el — gyorsabb és pontosabb ajánlatot tudok adni.",
+
+  "formName": "Név",
+  "formEmail": "E-mail",
+  "formTopic": "Téma (röviden)",
+  "formTopicPlaceholder": "Pl. lead automatizálás, IoT dashboard, AI integráció...",
+  "formMsg": "Projekt részletei",
+  "formMsgPlaceholder": "Hol tart most a projekt? Mi a cél? Határidő, platform, környezet?",
+  "formSendDemo": "Indítsuk el a beszélgetést",
+
+  "footerText": "AutoRobotTech – Webes & IoT automatizálás",
+  "footerLinks": "Adatkezelés • Sütik • Jogi információk"
 }

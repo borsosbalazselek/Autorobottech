@@ -1,89 +1,110 @@
 {
-  "meta": {
-    "title": "AutoRobotTech – Webes, IoT és AI alapú automatizálás",
-    "description": "AutoRobotTech: webes automatizálás, IoT rendszerek, mesterséges intelligencia, fejlesztés, vezérlés és integráció."
-  },
+  "seoTitle": "AutoRobotTech – Web, IoT & AI Automation",
+  "seoDescription": "Web, IoT and AI automation engineered for results: reliable systems, integrations and control layers built to scale.",
 
-  "nav": {
-    "home": "Home",
-    "services": "Services",
-    "solutions": "Solutions",
-    "gallery": "Gallery",
-    "contact": "Contact",
-    "portfolio": "Portfolio",
-    "onpenportfolio": "Open Portfolio"
-  },
+  "brandLogo": "AUTOROBOTTECH.HU",
+  "navAriaMenu": "Menu",
+  "langHu": "HU",
+  "langEn": "EN",
 
-  "hero": {
-    "title": "Webes, IoT és AI alapú automatizálás",
-    "subtitle": "Egyedi rendszerek, vezérlés, integrációk és okos automatizmusok.",
-    "cta": "Tudj meg többet"
-  },
+  "navHome": "Home",
+  "navServices": "Services",
+  "navPortfolio": "Portfolio",
+  "navContact": "Contact",
+  "navOpenPortfolio": "Open portfolio",
 
-  "services": {
-    "title": "Szolgáltatásaink",
-    "description": "Automatizált rendszereket, webes integrációkat és egyedi IoT megoldásokat fejlesztünk.",
+  "heroKicker": "⚙️ Smart Web, IoT & AI Automation — Engineered for Results",
+  "heroTitle1": "Automation that",
+  "heroTitle2": "actually works for you",
+  "heroTitle3": "— in the browser and behind your systems.",
+  "heroSub": "From high-converting web workflows to IoT control layers and AI-driven logic — I build automation systems that reduce manual work, eliminate friction and scale with your business.",
+  "heroCtaServices": "Explore services",
+  "heroCtaPortfolio": "See real projects",
+  "heroTag1": "Web & no-code automation",
+  "heroTag2": "IoT, control & monitoring",
+  "heroTag3": "Behavior-driven logic",
+  "heroTag4": "Applied AI integration",
 
-    "item1": {
-      "title": "Webes rendszerek",
-      "text": "Egyedi fejlesztésű backend és frontend megoldások."
-    },
+  "heroBadge": "End-to-end automation",
+  "heroCardTitle": "Automation engineered for impact",
+  "heroCardText": "Web systems, IoT devices and AI models built with one goal: clarity, reliability and measurable performance.",
+  "heroStat1Title": "Web & AI",
+  "heroStat1Text": "Conversion-focused landing pages, CRM automation, AI assistants and intelligent workflows.",
+  "heroStat2Title": "IoT & control",
+  "heroStat2Text": "Secure monitoring, real-time data and remote control — delivered through clean web interfaces.",
 
-    "item2": {
-      "title": "IoT alapú vezérlés",
-      "text": "Okos eszközök integrálása és felügyelete."
-    },
+  "servicesEyebrow": "What I build",
+  "servicesTitle": "Automation systems that move your business forward",
+  "servicesLead1": "Whether it's a conversion-focused web workflow or a scalable IoT control layer, every project follows the same engineering mindset. Full details available at",
+  "servicesLeadStrong": "services.autorobottech.hu",
+  "servicesLead2": ".",
 
-    "item3": {
-      "title": "Mesterséges intelligencia",
-      "text": "AI alapú automatizmusok és rendszerek fejlesztése."
-    }
-  },
+  "servicesCard1Badge": "Web & business automation",
+  "servicesCard1Title": "High-performance web automation",
+  "servicesCard1Text": "AI-powered and no-code driven systems designed to capture leads, automate workflows and integrate seamlessly with your CRM.",
+  "servicesCard1Li1": "Automated lead capture & qualification",
+  "servicesCard1Li2": "CRM integration (HubSpot, Pipedrive, custom APIs)",
+  "servicesCard1Li3": "AI chatbots & intelligent knowledge systems",
 
-  "solutions": {
-    "title": "Megoldásaink",
-    "description": "Komplex rendszereket építünk az igényedhez igazítva.",
+  "servicesCard2Badge": "IoT, control & monitoring",
+  "servicesCard2Title": "Intelligent monitoring & control systems",
+  "servicesCard2Text": "Connect devices, sensors and controllers into secure, scalable web dashboards. Built for clarity, efficiency and real-world performance.",
+  "servicesCard2Li1": "Device integration (MQTT, REST API, Modbus/TCP)",
+  "servicesCard2Li2": "Live dashboards, trend tracking & smart alerts",
+  "servicesCard2Li3": "Access control, logging & intuitive control panels",
 
-    "ai": {
-      "title": "AI automatizálás",
-      "text": "Viselkedésfák, workflow-k, predikciók és vezérlő algoritmusok."
-    },
-    "iot": {
-      "title": "IoT Integráció",
-      "text": "Szenzorok, aktuátorok, gateway-ek és egyedi protokollok."
-    },
-    "web": {
-      "title": "Web Integráció",
-      "text": "Backend API-k, admin felületek és automatizált folyamatok."
-    }
-  },
+  "servicesCard3Badge": "Decision systems",
+  "servicesCard3Title": "Structured behavior-driven architectures",
+  "servicesCard3Text": "Clear and scalable decision logic for games, robotics and complex automation — engineered for performance and maintainability.",
+  "servicesCard3Li1": "Architecture planning & documentation",
+  "servicesCard3Li2": "Integration into existing engines/systems",
+  "servicesCard3Li3": "Optimization & testing workflows",
 
-  "gallery": {
-    "title": "Galéria",
-    "description": "Projektjeinkből készült válogatás.",
+  "servicesCard4Badge": "Applied AI",
+  "servicesCard4Title": "AI built for real-world performance",
+  "servicesCard4Text": "Custom-trained models embedded directly into operational workflows — focused on measurable efficiency gains, not experiments.",
+  "servicesCard4Li1": "Data preparation & structure design",
+  "servicesCard4Li2": "Model training & fine-tuning",
+  "servicesCard4Li3": "Deployment into existing systems",
 
-    "img1": { "alt": "IoT vezérlés példa" },
-    "img2": { "alt": "AI workflow vizualizáció" },
-    "img3": { "alt": "Webes dashboard" },
-    "img4": { "alt": "Automatizált folyamat ábra" }
-  },
+  "servicesButton": "See full service breakdown",
 
-  "contact": {
-    "title": "Kapcsolat",
-    "description": "Írj nekünk, ha érdekel egy rendszer vagy automatizálás.",
+  "portfolioEyebrow": "Portfolio",
+  "portfolioTitle": "Proof, not promises",
+  "portfolioLead": "Explore real implementations across web automation, IoT systems and AI workflows — with transparent technical insight.",
 
-    "form": {
-      "name": "Név",
-      "namePlaceholder": "Add meg a neved",
-      "email": "E-mail",
-      "emailPlaceholder": "Add meg az e-mail címed",
-      "message": "Üzenet",
-      "messagePlaceholder": "Írd meg az üzeneted…",
-      "submit": "Üzenet elküldése"
-    }
-  },
+  "portfolioBoxTitle": "portfolio.autorobottech.hu",
+  "portfolioBoxText": "A structured showcase of real engineering decisions, architecture thinking and measurable outcomes — not just visuals.",
+  "portfolioBoxMeta": "See how web, IoT control and AI integrate into cohesive, scalable systems.",
+  "portfolioBoxButton": "View portfolio",
+  "portfolioTag1": "Responsive & multilingual-ready",
+  "portfolioTag2": "Dark / light experience",
 
-  "footer": {
-    "copyright": "© 2025 AutoRobotTech – Minden jog fenntartva."
-  }
+  "portfolioSide1Title": "What you’ll discover",
+  "portfolioSide1Li1": "Web / front-end / automation systems",
+  "portfolioSide1Li2": "IoT / control / monitoring architectures",
+  "portfolioSide1Li3": "AI tools & behavior-driven projects",
+
+  "portfolioSide2Title": "How to approach it",
+  "portfolioSide2Text": "Each project highlights the problem, the architectural thinking behind the solution, and the measurable impact achieved.",
+
+  "contactEyebrow": "Contact",
+  "contactTitle": "Let’s build something that performs",
+  "contactLead": "Tell me what you're planning — automation, IoT control or AI integration — and receive a practical, technically grounded proposal focused on results.",
+
+  "contactInfoTitle": "Contact details",
+  "contactEmailLabel": "Email",
+  "contactPortfolioLabel": "Portfolio",
+  "contactHighlight": "Already have documentation or a concept? Share it — you'll receive a faster, more precise proposal.",
+
+  "formName": "Name",
+  "formEmail": "Email",
+  "formTopic": "Topic (short)",
+  "formTopicPlaceholder": "E.g. lead automation, IoT dashboard, AI integration...",
+  "formMsg": "Project details",
+  "formMsgPlaceholder": "Where is the project now? What’s the goal? Deadline, platform, environment?",
+  "formSendDemo": "Start the conversation",
+
+  "footerText": "AutoRobotTech – Web & IoT automation",
+  "footerLinks": "Privacy • Cookies • Legal"
 }

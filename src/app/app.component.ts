@@ -1,7 +1,9 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
+import { Title } from '@angular/platform-browser';
+import { Meta } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +16,19 @@ export class AppComponent {
   navOpen = false;
   scrolled = false;
 
-  constructor(private translate: TranslateService) {
-    translate.addLangs(['hu', 'en']);
-    translate.setDefaultLang('hu');
-    translate.use('hu');
+  private translate = inject(TranslateService);
+  private title = inject(Title);
+  private meta = inject(Meta);
+  private doc = inject(DOCUMENT);
+
+  constructor() {
+    this.translate.addLangs(['hu', 'en']);
+    this.translate.setDefaultLang('hu');
+    this.translate.use('hu');
+
+    // első betöltés + minden nyelvváltás után frissítjük a head-et
+    this.applySeoForCurrentLang();
+    this.translate.onLangChange.subscribe(() => this.applySeoForCurrentLang());
   }
 
   switchLang(lang: string) {
@@ -25,23 +36,55 @@ export class AppComponent {
     this.closeNav();
   }
 
-  toggleNav() {
-    this.navOpen = !this.navOpen;
+  private applySeoForCurrentLang() {
+    const lang = this.translate.currentLang || this.translate.defaultLang || 'hu';
+
+    // <html lang="">
+    this.doc.documentElement.lang = lang;
+
+    // Title + meta description a fordításból
+    const seoTitle = this.translate.instant('seoTitle');
+    const seoDescription = this.translate.instant('seoDescription');
+
+    if (seoTitle) this.title.setTitle(seoTitle);
+
+    if (seoDescription) {
+      this.meta.updateTag({ name: 'description', content: seoDescription });
+      this.meta.updateTag({ property: 'og:description', content: seoDescription });
+      this.meta.updateTag({ name: 'twitter:description', content: seoDescription });
+    }
+
+    if (seoTitle) {
+      this.meta.updateTag({ property: 'og:title', content: seoTitle });
+      this.meta.updateTag({ name: 'twitter:title', content: seoTitle });
+    }
+
+    // canonical – maradhat fix, de legalább legyen konzisztens
+    const canonicalUrl = this.doc.location?.origin ? `${this.doc.location.origin}/` : 'https://autorobottech.hu/';
+    this.setCanonical(canonicalUrl);
+    this.meta.updateTag({ property: 'og:url', content: canonicalUrl });
   }
 
-  closeNav() {
-    this.navOpen = false;
+  private setCanonical(url: string) {
+    let link: HTMLLinkElement | null = this.doc.querySelector("link[rel='canonical']");
+    if (!link) {
+      link = this.doc.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      this.doc.head.appendChild(link);
+    }
+    link.setAttribute('href', url);
   }
+
+  toggleNav() { this.navOpen = !this.navOpen; }
+  closeNav() { this.navOpen = false; }
 
   @HostListener('window:scroll')
   onScroll() {
     this.scrolled = window.scrollY > 10;
   }
 
-
-
   onSubmit(e: Event) {
-  e.preventDefault();
-  alert('Köszönjük! Hamarosan jelentkezünk.');
-}
+    e.preventDefault();
+    alert('Köszönjük! Hamarosan jelentkezünk.');
+  }
 }

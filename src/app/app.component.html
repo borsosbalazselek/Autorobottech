@@ -1,22 +1,27 @@
 <div class="body">
-<header class="header" id="top-header">
+  <header class="header" id="top-header">
     <div class="container header-inner">
-      <div class="logo">AUTOROBOTTECH.HU</div>
-      <div class="hamburger" id="nav-toggle" aria-label="Menü">
+      <div class="logo">{{ 'brandLogo' | translate }}</div>
+
+      <div class="hamburger" id="nav-toggle" [attr.aria-label]="'navAriaMenu' | translate">
         <span></span>
         <span></span>
         <span></span>
       </div>
+
       <div class="lang-switch">
-        <button (click)="switchLang('hu')">HU</button>
-        <button (click)="switchLang('en')">EN</button>
+        <button (click)="switchLang('hu')">{{ 'langHu' | translate }}</button>
+        <button (click)="switchLang('en')">{{ 'langEn' | translate }}</button>
       </div>
+
       <nav class="nav" id="main-nav">
-        <a class="nav-link" href="#home">{{ 'nav.home' | translate }}</a>
-        <a class="nav-link" href="#services">{{ 'nav.services' | translate }}</a>
-        <a class="nav-link" href="#portfolio">{{ 'nav.portfolio' | translate }}</a>
-        <a class="nav-link" href="#contact">{{ 'nav.contact' | translate }}</a>
-        <a class="nav-cta" href="https://portfolio.autorobottech.hu/" rel="noopener">{{ 'nav.onpenportfolio' | translate }} →</a>
+        <a class="nav-link" href="#home">{{ 'navHome' | translate }}</a>
+        <a class="nav-link" href="#services">{{ 'navServices' | translate }}</a>
+        <a class="nav-link" href="#portfolio">{{ 'navPortfolio' | translate }}</a>
+        <a class="nav-link" href="#contact">{{ 'navContact' | translate }}</a>
+        <a class="nav-cta" href="https://portfolio.autorobottech.hu/" rel="noopener">
+          {{ 'navOpenPortfolio' | translate }} →
+        </a>
       </nav>
     </div>
   </header>
@@ -26,227 +31,208 @@
     <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <div class="hero-kicker">⚙️ Webes & IoT-alapú automatizálás egy kézből</div>
+          <div class="hero-kicker">{{ 'heroKicker' | translate }}</div>
+
           <h1 class="hero-title">
-            Automatizálás, ami
-            <span>helyetted dolgozik</span> – a böngészőben és az eszközeid mögött is.
+            {{ 'heroTitle1' | translate }}
+            <span>{{ 'heroTitle2' | translate }}</span>
+            {{ 'heroTitle3' | translate }}
           </h1>
+
           <p class="hero-sub">
-            Webalkalmazások, IoT, vezérlés, viselkedés fák és AI tanítás.  
-            Nem csak szép felület vagy egy elszigetelt script: folyamatok, amik stabilan,
-            kiszámíthatóan futnak, és csökkentik a kézi munkát.
+            {{ 'heroSub' | translate }}
           </p>
+
           <div class="hero-cta-row">
-            <a class="btn btn-primary" href="https://services.autorobottech.hu/">Szolgáltatások áttekintése</a>
-            <a class="btn btn-ghost" href="https://portfolio.autorobottech.hu/" target="_blank" rel="noopener">Portfólió megnyitása</a>
+            <a class="btn btn-primary" href="https://services.autorobottech.hu/">
+              {{ 'heroCtaServices' | translate }}
+            </a>
+            <a class="btn btn-ghost" href="https://portfolio.autorobottech.hu/" target="_blank" rel="noopener">
+              {{ 'heroCtaPortfolio' | translate }}
+            </a>
           </div>
+
           <div class="hero-tags">
-            <span class="tag-pill">Webes & no-code automatizáció</span>
-            <span class="tag-pill">IoT, vezérlés & felügyelet</span>
-            <span class="tag-pill">Viselkedés fák</span>
-            <span class="tag-pill">AI tanítás & integráció</span>
+            <span class="tag-pill">{{ 'heroTag1' | translate }}</span>
+            <span class="tag-pill">{{ 'heroTag2' | translate }}</span>
+            <span class="tag-pill">{{ 'heroTag3' | translate }}</span>
+            <span class="tag-pill">{{ 'heroTag4' | translate }}</span>
           </div>
         </div>
 
         <div class="hero-visual">
           <div class="hero-card">
             <div>
-              <span class="hero-badge">Full-stack automatizálás</span>
-              <br>
-              <h2>AutoRobotTech snapshot</h2>
-              <p>Webes folyamatok, IoT-eszközök és AI ugyanabból a gondolkodásból: stabil, dokumentált megoldások.</p>
+              <span class="hero-badge">{{ 'heroBadge' | translate }}</span>
+              <br />
+              <h2>{{ 'heroCardTitle' | translate }}</h2>
+              <p>{{ 'heroCardText' | translate }}</p>
             </div>
+
             <div class="hero-stats">
               <div class="hero-stat-box">
-                <strong>Web & AI</strong><br>
-                <span>Landingek, űrlapok, CRM, no-code flowk, AI chatbot.</span>
+                <strong>{{ 'heroStat1Title' | translate }}</strong><br />
+                <span>{{ 'heroStat1Text' | translate }}</span>
               </div>
               <div class="hero-stat-box">
-                <strong>IoT & vezérlés</strong><br>
-                <span>Eszköz- és szenzoradatok, távoli felügyelet, irányítás webes felületről.</span>
+                <strong>{{ 'heroStat2Title' | translate }}</strong><br />
+                <span>{{ 'heroStat2Text' | translate }}</span>
               </div>
             </div>
+
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SZOLGÁLTATÁS BLOKK – rövid összefoglaló -->
+    <!-- SERVICES -->
     <section id="services">
       <div class="container">
         <div class="section-head">
-          <div class="section-eyebrow">Mivel foglalkozom?</div>
-          <h2 class="section-title">Webes, IoT és AI alapú automatizálás</h2>
+          <div class="section-eyebrow">{{ 'servicesEyebrow' | translate }}</div>
+          <h2 class="section-title">{{ 'servicesTitle' | translate }}</h2>
           <p class="section-lead">
-            A cél: ugyanabból a szemléletből segíteni, akár egy landing page-ről,
-            akár egy IoT-alapú vezérlési szintről van szó. A részletes leírások a
-            <strong>services.autorobottech.hu</strong> oldalon érhetők el.
+            {{ 'servicesLead1' | translate }}
+            <strong>{{ 'servicesLeadStrong' | translate }}</strong>
+            {{ 'servicesLead2' | translate }}
           </p>
         </div>
 
         <div class="grid grid-2">
           <article class="card">
-            <span class="badge-pill">Web & üzleti folyamatok</span>
-            <h3>Webes automatizáció & integrációk</h3>
-            <p>
-              AI & no-code alapú webes megoldások: honlapok, űrlapok, CRM-szinkron,
-              e-mail/SMS kampányok, Zapier/Make folyamatok.
-            </p>
+            <span class="badge-pill">{{ 'servicesCard1Badge' | translate }}</span>
+            <h3>{{ 'servicesCard1Title' | translate }}</h3>
+            <p>{{ 'servicesCard1Text' | translate }}</p>
             <ul class="card-list">
-              <li>Automatizált leadgyűjtés & kapcsolatfelvétel</li>
-              <li>CRM integráció (pl. HubSpot, Pipedrive)</li>
-              <li>AI chatbot & tudásbázis az ügyfeleknek</li>
-            </ul>
-          </article>
-
-          <!-- IPARI CARD HELYETT: IoT / VEZÉRLÉS / FELÜGYELET -->
-          <article class="card">
-            <span class="badge-pill">IoT, vezérlés & felügyelet</span>
-            <h3>IoT, vezérlés, irányítás & felügyelet</h3>
-            <p>
-              Eszközök, szenzorok és vezérlők összekötése jól átlátható, webes felületekkel.  
-              Fókusz: adatgyűjtés, távoli felügyelet és biztonságos irányítás – ott, ahol
-              a “nyers jel” már kevés, de a teljes SCADA túlzás lenne.
-            </p>
-            <ul class="card-list">
-              <li>Eszközök, szenzorok, gatewayek bekötése (pl. MQTT, REST API, Modbus/TCP)</li>
-              <li>Felügyeleti felületek: webes dashboard, trendek, riasztások</li>
-              <li>Jogosultságkezelés, logolás, felhasználóbarát vezérlőpanelek</li>
+              <li>{{ 'servicesCard1Li1' | translate }}</li>
+              <li>{{ 'servicesCard1Li2' | translate }}</li>
+              <li>{{ 'servicesCard1Li3' | translate }}</li>
             </ul>
           </article>
 
           <article class="card">
-            <span class="badge-pill">Viselkedés vezérelt rendszerek</span>
-            <h3>Viselkedés fák készítése</h3>
-            <p>
-              Játékokhoz, IoT-s / robotikus rendszerekhez vagy összetett döntési logikához:  
-              vizuálisan is jól átlátható behavior tree struktúrák.
-            </p>
+            <span class="badge-pill">{{ 'servicesCard2Badge' | translate }}</span>
+            <h3>{{ 'servicesCard2Title' | translate }}</h3>
+            <p>{{ 'servicesCard2Text' | translate }}</p>
             <ul class="card-list">
-              <li>Tervezés & dokumentáció</li>
-              <li>Implementáció meglévő motorokba / rendszerekbe</li>
-              <li>Debug, finomhangolás, teszt forgatókönyvek</li>
+              <li>{{ 'servicesCard2Li1' | translate }}</li>
+              <li>{{ 'servicesCard2Li2' | translate }}</li>
+              <li>{{ 'servicesCard2Li3' | translate }}</li>
             </ul>
           </article>
 
           <article class="card">
-            <span class="badge-pill">AI & machine learning</span>
-            <h3>AI tanítás & beillesztés a gyakorlatba</h3>
-            <p>
-              Saját adat alapján tanított modellek, folyamatba illesztett AI eszközök,
-              valós használatra optimalizálva – nem csak proof of concept.
-            </p>
+            <span class="badge-pill">{{ 'servicesCard3Badge' | translate }}</span>
+            <h3>{{ 'servicesCard3Title' | translate }}</h3>
+            <p>{{ 'servicesCard3Text' | translate }}</p>
             <ul class="card-list">
-              <li>Adat-előkészítés & struktúra átgondolása</li>
-              <li>AI modellek tanítása / finomhangolása</li>
-              <li>Integráció a meglévő szoftverekkel</li>
+              <li>{{ 'servicesCard3Li1' | translate }}</li>
+              <li>{{ 'servicesCard3Li2' | translate }}</li>
+              <li>{{ 'servicesCard3Li3' | translate }}</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="badge-pill">{{ 'servicesCard4Badge' | translate }}</span>
+            <h3>{{ 'servicesCard4Title' | translate }}</h3>
+            <p>{{ 'servicesCard4Text' | translate }}</p>
+            <ul class="card-list">
+              <li>{{ 'servicesCard4Li1' | translate }}</li>
+              <li>{{ 'servicesCard4Li2' | translate }}</li>
+              <li>{{ 'servicesCard4Li3' | translate }}</li>
             </ul>
           </article>
         </div>
 
         <div style="margin-top:1.7rem;">
           <a class="btn btn-primary" href="https://services.autorobottech.hu/">
-            Ugrás a részletes szolgáltatás oldalra → 
+            {{ 'servicesButton' | translate }} →
           </a>
         </div>
       </div>
     </section>
 
-    <!-- PORTFÓLIÓ TEASER -->
+    <!-- PORTFOLIO -->
     <section id="portfolio">
       <div class="container">
         <div class="section-head">
-          <div class="section-eyebrow">Portfólió</div>
-          <h2 class="section-title">Nézd meg, min dolgoztam eddig</h2>
-          <p class="section-lead">
-            A portfólió oldalon webes projektek, IoT/vezérlés munkák és kísérleti AI megoldások
-            is találhatók – részletes leírással és technikai háttérrel.
-          </p>
+          <div class="section-eyebrow">{{ 'portfolioEyebrow' | translate }}</div>
+          <h2 class="section-title">{{ 'portfolioTitle' | translate }}</h2>
+          <p class="section-lead">{{ 'portfolioLead' | translate }}</p>
         </div>
 
         <div class="portfolio-teaser">
           <article class="card portfolio-box">
-            <h3>portfolio.autorobottech.hu</h3>
-            <p>
-              Több szekcióra bontott bemutató: tapasztalat, tanulmányok,
-              projektek, elérhetőség. A fókusz: valós példák, dokumentált megközelítés,
-              nem csak “szép mockupok”.
-            </p>
-            <div class="portfolio-meta">
-              Egy oldal, ahol a web, az IoT/vezérlés és az AI egymás mellett látszik.
-            </div>
+            <h3>{{ 'portfolioBoxTitle' | translate }}</h3>
+            <p>{{ 'portfolioBoxText' | translate }}</p>
+            <div class="portfolio-meta">{{ 'portfolioBoxMeta' | translate }}</div>
+
             <div class="portfolio-cta-row">
               <a class="btn btn-primary" href="https://portfolio.autorobottech.hu/" rel="noopener">
-                Portfólió megnyitása → 
+                {{ 'portfolioBoxButton' | translate }} →
               </a>
-              <span class="portfolio-tag">Reszponzív, többnyelvű alap</span>
-              <span class="portfolio-tag">Dark / light hangulat</span>
+              <span class="portfolio-tag">{{ 'portfolioTag1' | translate }}</span>
+              <span class="portfolio-tag">{{ 'portfolioTag2' | translate }}</span>
             </div>
           </article>
 
           <div class="grid" style="gap:0.7rem;">
             <div class="card">
-              <h3>Mit találsz ott?</h3>
+              <h3>{{ 'portfolioSide1Title' | translate }}</h3>
               <ul class="card-list">
-                <li>Webes / front-end / automatizációs projektek</li>
-                <li>IoT / vezérlés / felügyeleti megoldások</li>
-                <li>Kísérleti AI / viselkedés fa / tool jellegű projektek</li>
+                <li>{{ 'portfolioSide1Li1' | translate }}</li>
+                <li>{{ 'portfolioSide1Li2' | translate }}</li>
+                <li>{{ 'portfolioSide1Li3' | translate }}</li>
               </ul>
             </div>
             <div class="card">
-              <h3>Hogyan érdemes nézni?</h3>
-              <p>
-                Konkrét példákon keresztül látszik, hogy milyen gondolkodással állok
-                egy problémához – és hogyan lesz belőle stabil, jól dokumentált megoldás.
-              </p>
+              <h3>{{ 'portfolioSide2Title' | translate }}</h3>
+              <p>{{ 'portfolioSide2Text' | translate }}</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- KAPCSOLAT -->
+    <!-- CONTACT -->
     <section id="contact">
       <div class="container">
         <div class="section-head">
-          <div class="section-eyebrow">Kapcsolat</div>
-          <h2 class="section-title">Beszéljünk a következő automatizálásodról</h2>
-          <p class="section-lead">
-            Írj pár mondatot arról, miben gondolkodsz – lehet egy kisebb webes folyamat,
-            egy IoT / vezérlés fejlesztés, vagy egy AI kísérlet is. Visszajelzek, hogyan tudok
-            érdemben segíteni.
-          </p>
+          <div class="section-eyebrow">{{ 'contactEyebrow' | translate }}</div>
+          <h2 class="section-title">{{ 'contactTitle' | translate }}</h2>
+          <p class="section-lead">{{ 'contactLead' | translate }}</p>
         </div>
 
         <div class="contact-grid">
           <div class="card contact-info">
-            <h3>Elérhetőségek</h3>
-            <p><strong>E-mail:</strong> <a href="mailto:info@autorobottech.hu">info&#64;autorobottech.hu</a></p>
-            <p><strong>Portfólió:</strong> <a href="https://portfolio.autorobottech.hu/" target="_blank" rel="noopener">portfolio.autorobottech.hu</a></p>
-            <p class="contact-highlight">
-              Ha már van konkrét projektleírásod / dokumentációd, nyugodtan linkeld be –  
-              gyorsabb lesz a válasz és pontosabb az ajánlat.
-            </p>
+            <h3>{{ 'contactInfoTitle' | translate }}</h3>
+            <p><strong>{{ 'contactEmailLabel' | translate }}:</strong> <a href="mailto:info@autorobottech.hu">info&#64;autorobottech.hu</a></p>
+            <p><strong>{{ 'contactPortfolioLabel' | translate }}:</strong> <a href="https://portfolio.autorobottech.hu/" target="_blank" rel="noopener">portfolio.autorobottech.hu</a></p>
+            <p class="contact-highlight">{{ 'contactHighlight' | translate }}</p>
           </div>
 
-          <form class="card contact-form" onsubmit="event.preventDefault(); alert('Köszönöm! A végleges verzióban állíts be saját űrlapfeldolgozást (pl. backend / Formspree / Make).');">
+          <!-- Fontos: a button-on NEM submit event van, hanem (click) vagy a form (submit) -->
+          <form
+            class="card contact-form"
+            (submit)="onSubmit($event)"
+          >
             <div>
-              <label for="name">Név</label>
+              <label for="name">{{ 'formName' | translate }}</label>
               <input id="name" name="name" required />
             </div>
             <div>
-              <label for="email">E-mail</label>
+              <label for="email">{{ 'formEmail' | translate }}</label>
               <input id="email" name="email" type="email" required />
             </div>
             <div>
-              <label for="topic">Téma (röviden)</label>
-              <input id="topic" name="topic" placeholder="Pl. webes lead automatizálás, IoT dashboard, AI tanítás..." />
+              <label for="topic">{{ 'formTopic' | translate }}</label>
+              <input id="topic" name="topic" placeholder="{{ 'formTopicPlaceholder' | translate }}" />
             </div>
             <div>
-              <label for="msg">Részletesebb leírás</label>
-              <textarea id="msg" name="message" placeholder="Hol tart a projekt? Mi a cél? Határidő, helyszín, platform?"></textarea>
+              <label for="msg">{{ 'formMsg' | translate }}</label>
+              <textarea id="msg" name="message" placeholder="{{ 'formMsgPlaceholder' | translate }}"></textarea>
             </div>
-            <button class="btn btn-primary" (submit)="onSubmit($event)">Üzenet elküldése (demo)</button>
+            <button class="btn btn-primary" type="submit">{{ 'formSendDemo' | translate }}</button>
           </form>
         </div>
       </div>
@@ -255,8 +241,8 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> AutoRobotTech – Webes & IoT automatizálás</div>
-      <div class="footer-links">Adatkezelés • Sütik • Impresszum</div>
+      <div>© <span id="year"></span> {{ 'footerText' | translate }}</div>
+      <div class="footer-links">{{ 'footerLinks' | translate }}</div>
     </div>
   </footer>
 </div>
